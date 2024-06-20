@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+
+<body>
+     <div id="root">
+        <h1> I am a good boy</h1>
+        <!-- <div class="secondh">
+ 
+        </div> -->
+    </div> 
+    <!-- <script src="App.js"></script> This wrong-->
+    <!-- Load React first -->
+    <!-- <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script> -->
+    <!-- Load ReactDOM after React -->
+    <!-- <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script> -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+        
+    </script>
+    
+    <script src="App.js"></script>
+    <!-- this order of the file are always in the sequence always you have to keep your react befoer 
+    the App.js because the code inside this app.js is used inside the react -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namestey react</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div> -->
+<!-- <script>
+        const elementcreate=document.createElement("h1");
+        const elementcreate1=document.createElement("h2");
+        elementcreate.innerHTML="Hello World! from javascript";
+        elementcreate1.innerHTML="Hello World! from Namestey javascript";
+        const root=document.getElementById("root")
+        root.appendChild(elementcreate,elementcreate1);
+
+    </script> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+<body>
+       <div id="root"></div>  
+
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script> -->
+
+    <!-- <script>
+        const heading = React.createElement("h1", {}, "Hello world from react!");
+        ReactDOM.render(heading, document.getElementById("root"));
+    </script>
+</body>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin>
+    </script>
+
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+
+
+    <script>
+        const heading = React.createElement("h1", {}, "Hello world from react!");
+        const root = ReactDOM.render(document.getElementById("root"));
+        root.render(heading);
+    </script>
+
+</body>
+
+</html> --> 
+<!-------------
+Difference between append and the append child
+
+1.Append Child 
+===> Both append and the append child method in javascript are used to add new node to the DOM
+But they have some key difference in there uses and the capability
+
+   ***APPENDCHILD
+   .Type of node:Only accept single node(element or text node)
+   
+   .Return value: Returns the append child node.
+   
+   .Browser support: support all modern and the old browser.
+
+   ****APPEND: 
+   . Type of Nodes: Can accept a mixture of Node objects and DOMStrings (text).
+
+   . Multiple Arguments: Can accept multiple arguments, allowing multiple nodes or strings to be appended at once.
+
+   . Return Value: Does not return any value.
+
+   .Browser Support: Supported in all modern browsers, but not in Internet Explorer.
+
+                          CDN(content delivery network)
+  ===> A CDN, or Content Delivery Network, is a network of servers distributed geographically 
+  across multiple locations. The primary purpose of a CDN is to deliver content to users more 
+  efficiently by reducing latency and improving load times.
+
+  ===>Instead of hosting the React library files locally or bundling them with your 
+  application, you can load them directly from a CDN. This can reduce your application's 
+  initial load time and leverage the CDN's global network for faster content delivery.
+
+  =CDN is a place where react library is hoisted.
+  
+  Example of including React and ReactDOM from a CDN in an HTML file:
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React with CDN</title>
+    <!-React Library from CDN -->
+<!--- <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>->
+    <!- ReactDOM Library from CDN -->
+<!---- <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>--->
+<!-- </head>
+<body>
+    <div id="root"></div>
+    <script> -->
+<!-- // Example React code -->
+<!-- const element = React.createElement('h1', null, 'Hello, world!');
+        ReactDOM.render(element, document.getElementById('root'));
+    </script>
+
+
+</body>
+</html> -->
+
+<!-----To setup react in the html file, you can add react and react dom library from cdn
+and write your react code directly in the html file
+
+==> When we create root and rendering something inside it then this is the job of the DOM
+
+===>react.createElement it just creating h1 element inside react ie core react thing but when
+we have put this h1 in dom or to a browser then we use reactdom libraries create root method
+and this will create root 
+==> root is the place where all the react code will run.every thing that we will render
+we will render inside the root
+
+@18/06/2024
+
+Removing someting from the dom and putting something into the dom tree  is costly operation
+and all this framework and library are try to optimize this and react is also comes with the
+philosophy that when ever you need to do anything on the webpage do it using javascript and 
+that is why react give us these helper function to make this things work in very perfectent
+way.
+==> So react comes with the philosophy of writing or manupulating the dom using javascript
+      
+      
+                   IMportant question
+
+
+Q.WHAT IS PROP IN REACT?
+===> prop is a short form of the property in a react are a mechanism to pass data from parent
+component to a child componenet They are similar to the html attribute ,but they can pass more 
+complex data and the function
+
+  KEY CHARACTERISTIC OF THE PROP
+
+  1.READ ONLY: prop are immutable,meaning a component cannot modify it own prop
+
+  2.DATA FLOW:Prop allow data flow from parent to its child component,promoting a 
+  unidirectional data flow(also known as one way data binding)
+
+  3.COMPONENT: Both functional and class component can receive and use prop.
+
+
+Q.What is cross origin in the react file?
+
+===?The crossorigin attribute in the <script> tag is used to handle the cross-origin requests 
+    for the scripts being loaded. It is particularly relevant when you're loading resources 
+    (like JavaScript files) from a different origin (e.g., a different domain) than the one 
+    your web page is hosted on.
+
+===>
+
+
+----->
